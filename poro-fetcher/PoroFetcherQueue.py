@@ -45,6 +45,9 @@ class PoroFetcherQueue:
     def wait_all(self):
         self._queue.join()
 
+    def set_api_key(self, api_key):
+        self._api_key = api_key
+
     def _daemon(self):
         while True:
             url, return_func = self._queue.get()

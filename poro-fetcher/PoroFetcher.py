@@ -51,6 +51,10 @@ class PoroFetcher:
         for region, host in self.HOSTS.iteritems():
             self._queues[region] = PoroFetcherQueue(host, api_key)
 
+    def set_api_key(self, api_key):
+        for queue in self._queues.values():
+            queue.set_api_key(api_key)
+
     def request(self, region, url, return_func):
         self._queues[region].add(url, return_func)
 
