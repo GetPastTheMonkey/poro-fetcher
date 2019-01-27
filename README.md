@@ -1,4 +1,4 @@
-PoroFetcher v0.1.0
+PoroFetcher v0.2.0
 ==================
 
 PoroFetcher is an asynchronous wrapper for the RiotGames API with multithreading support.

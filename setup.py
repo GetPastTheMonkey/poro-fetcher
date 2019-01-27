@@ -29,7 +29,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="poro-fetcher",
-    version="0.1.0",
+    version="0.2.0",
     author="Sven Grübel",
     author_email="sven.gruebel@gmx.ch",
     description="Python wrapper for the League of Legends API with rate limiting",
