@@ -34,46 +34,52 @@ pf.wait_all()
 Supported API calls
 -------------------
 
-All v3 API endpoints (except the tournament API endpoints) are supported. This is the list
+All v3 and v4 API endpoints (except the tournament API endpoints) are supported. This is the list
 of all available API function of the ```PoroFetcher``` class.
 
 ```python
-# Champion Mastery v3
-champion_masteries_by_summoner(region, summoner_id, return_func)
-champion_masteries_by_summoner_by_champion(region, summoner_id, champion_id, return_func)
-champion_mastery_score_by_summoner(region, summoner_id, return_func)
+# Champion Mastery v4
+champion_masteries_by_summoner(region, encrypted_summoner_id, return_func)
+champion_masteries_by_summoner_by_champion(region, encrypted_summoner_id, champion_id, return_func)
+champion_mastery_score_by_summoner(region, encrypted_summoner_id, return_func)
 
 # Champion v3
 champion_rotations(region, return_func)
 
-# League v3
+# League v4
 league_challengers_solo(region, return_func)
 league_challengers_flex_sr(region, return_func)
 league_challengers_flex_tt(region, return_func)
-league_by_league_id(region, league_id, return_func)
+league_grandmasters_solo(region, return_func)
+league_grandmasters_flex_sr(region, return_func)
+league_grandmasters_flex_tt(region, return_func)
 league_masterleagues_solo(region, return_func)
 league_masterleagues_flex_sr(region, return_func)
 league_masterleagues_flex_tt(region, return_func)
-league_position_by_summoner(region, summoner_id, return_func)
+league_by_league_id(region, league_id, return_func)
+league_positions_by_summoner(region, encrypted_summoner_id, return_func)
+league_positional_rank_queues(region, return_func)
+league_positional_rank_entries(self, region, queue, tier, division, position, page, return_func)
 
 # LoL Status v3
 status(region, return_func)
 
-# Match v3
+# Match v4
 match_by_id(region, match_id, return_func)
-match_list_by_account_id(region, account_id, return_func)
-match_list_by_summoner_id(region, summoner_id, return_func)
+match_list_by_account_id(region, encrypted_account_id, return_func)
+match_list_by_summoner_id(region, encrypted_summoner_id, return_func)
 match_timeline_by_id(region, match_id, return_func)
 
-# Spectator v3
-spectator_active_game_by_summoner(region, summoner_id, return_func)
+# Spectator v4
+spectator_active_game_by_summoner(region, encrypted_summoner_id, return_func)
 spectator_featured_games(region, return_func)
 
-# Summoner v3
-summoner_by_account(region, accound_id, return_func)
+# Summoner v4
+summoner_by_account(region, encrypted_accound_id, return_func)
 summoner_by_name(region, summoner_name, return_func)
-summoner_by_id(region, summoner_id, return_func)
+summoner_by_id(region, encrypted_summoner_id, return_func)
+summoner_by_puuid(self, region, encrypted_puuid, return_func)
 
-# Third Party Code v3
-third_party_code(region, summoner_id, return_func)
+# Third Party Code v4
+third_party_code(region, encrypted_summoner_id, return_func)
 ```
