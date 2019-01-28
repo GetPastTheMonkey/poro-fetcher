@@ -28,14 +28,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="poro-fetcher",
+    name="porofetcher",
     version="0.2.0",
     author="Sven Grübel",
     author_email="sven.gruebel@gmx.ch",
     description="Python wrapper for the League of Legends API with rate limiting",
     long_description=long_description,
     long_description_content="text/markdown",
-    url="https://github.com/getpastthemonkey/poro-fetcher",
+    url="https://github.com/getpastthemonkey/porofetcher",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 2.7",
